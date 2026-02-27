@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.animate-ken-burns {
+  animation: kenBurns 10s linear infinite alternate;
+}
+
+/* Efectos de entrada para el contenedor de texto */
+.effect-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+.effect-slide-up { animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.effect-zoom-in { animation: zoomIn 0.8s ease-out forwards; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Orientaciones */
+.orientacion-vertical { flex-direction: column; justify-content: flex-end; }
+.orientacion-horizontal { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+
+
+/* --- ANIMACIONES DE IMAGEN --- */
+.img-zoom { animation: kenBurns 12s linear infinite alternate; }
+.img-fade { animation: fadeIn 1.5s ease-in; }
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+/* --- ANIMACIONES DE TEXTO (Entradas) --- */
+.txt-entrada-abajo { animation: entrarAbajo 0.8s ease-out forwards; }
+.txt-entrada-arriba { animation: entrarArriba 0.8s ease-out forwards; }
+.txt-entrada-derecha { animation: entrarDerecha 0.8s ease-out forwards; }
+.txt-entrada-izquierda { animation: entrarIzquierda 0.8s ease-out forwards; }
+.txt-desvanecer { animation: fadeIn 2s ease-out forwards; }
+
+@keyframes entrarAbajo {
+  from { opacity: 0; transform: translateY(100px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes entrarArriba {
+  from { opacity: 0; transform: translateY(-200px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes entrarDerecha {
+  from { opacity: 0; transform: translateX(200px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes entrarIzquierda {
+  from { opacity: 0; transform: translateX(-200px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
